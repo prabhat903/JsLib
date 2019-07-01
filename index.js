@@ -10,10 +10,12 @@ let createElement = function(node,parent){
         let text = document.createTextNode(node.children);
         ele.appendChild(text);
     }
-    parent.appendChild(ele);
+    return ele;
 }
-createElement({
+let e = createElement({
     tag:"div",
     id: "main",
     children : "HEllo Budy !!!"
-},doc);
+});
+
+doc.appendChild(e);
